@@ -1,0 +1,47 @@
+*{box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../media/SlickyRickyBackground.jpg);
+    /* background-color: azure; */
+}
+
+.main {
+    
+    margin-bottom: 50px auto;
+
+}
+
+#logo{
+    position: absolute;
+    right: 37%;
+    
+    
+}
+
+
+
+
+#canvas {
+    background-color: #1a0124;
+    
+    margin-top: 150px;
+    position: relative;
+    top: 15%;
+    left: 16%;
+    
+}
+
+
+
+#startBtn {
+    background-color: #1a0124;
+    position: relative;
+    bottom: 25px;
+    left: 42%;
+    color: white;
+    padding: 10px;
+    border-radius: 45px;
+    border: 5px #ff5ae2 solid;
+}

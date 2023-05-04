@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/8bit-wonder" rel="stylesheet">
+
 
     <link rel="stylesheet" href="./css/style.css">
     <title>Slicky Ricky The Game</title>
@@ -12,29 +15,79 @@
 <body>
 
     <header class="header" id="header">
-        <h1><img id="logo" src="./media/SlickyRickyLogo copy.png" width="400" height="267"></h1>
-        <h2 class="customer" id="customer"></h2>
-        <h2 class="score" id="score">0</h2>
-        <h3 class="bonus" id="bonus">0</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-end">
+                    <h1><img id="logo" src="./media/SlickyRickyLogo copy.png" width="200" height="133"></h1>
+                </div>
+                <div class="col-6 controls text-light">
+                    <p>Press Arrow Keys To Move.</p>
+                    <p>Press Enter To Select Vehicle.</p>
+                </div>
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-end text-center">
+                        <div class="customer" id="customer"></div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-start">
+                        <div class="score" id="score"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
     </header>
     <main class="main" id="main">
-        <canvas id="canvas" width="800" height="500"> </canvas>
-        <div style="display:none">
-            <img id="slickyRicky" src="./media/SlickRicky.png" width="300" height="227" />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-12 text-center">
+                    <!-- <div id="start-screen" class="screen" style="display:block">
+                        <button onclick="startGame()">Start Game</button>
+                    </div> -->
+                    <canvas id="canvas" width="400" height="400" style-="display:none"> </canvas>
+                    <!-- <div style="display:none">
+                        <img id="slickyRicky" src="./media/SlickRicky.png" width="300" height="227" />
+                    </div> -->
+
+                </div>
+                <div id="restart"></div>
+            </div>
         </div>
-        
+
 
         <!-- <img src="./media/SlickRicky.png" id="slickyRicky" alt=""> -->
     </main>
 
     <footer>
-        <button class="startBtn" id="startBtn">Start Game</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="startBtn" id="startBtn">Start!</button>
+
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="col text-center music">
+                <audio id="music" class="d-none">
+                        <source src="./media/ghettolife.mp3" type="audio/mpeg">
+                       
+                        </audio>
+
+
+
+                <button onclick="play()" type="button"><img src="./media/play.png" width="20" alt=""> </button>
+                <button onclick="pause()" type="button"><img src="./media/pause.png" width="20" alt=""></button>
+
+            </div>
+        </div>
+        </div>
     </footer>
 
 
-
-    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./js/tilemap.js"></script>
 </body>
 
 </html>
